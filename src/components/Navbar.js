@@ -1,9 +1,12 @@
+/* eslint-disable no-template-curly-in-string */
 import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
+
+
     return (
-        <nav data-bs-theme="dark" className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav data-bs-theme={props.mode} className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
             <a className="navbar-brand" href="/">
             {props.title}
@@ -22,14 +25,12 @@ export default function Navbar(props) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
-                    Home
-                </a>
+                    <a className="nav-link" href="/">Home</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/">
-                    Link
-                </a>
+                    <a className="nav-link" href="/About">
+                        About
+                    </a>
                 </li>
                 <li className="nav-item dropdown">
                 <a
@@ -68,6 +69,10 @@ export default function Navbar(props) {
                 </a>
                 </li>
             </ul>
+            <div className={`form-check form-switch text-${(props.mode === 'light') ? 'dark' : 'light'} mx-2`}>
+            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode} />
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+            </div>  
             <form className="d-flex" role="search">
                 <input
                 className="form-control me-2"
@@ -86,6 +91,6 @@ export default function Navbar(props) {
 }
 
 
-Navbar.prototype = {title: PropTypes.title}
+Navbar.prototype = {title: PropTypes.title, mode: PropTypes.mode, toggleMode: PropTypes.toggleMode}
 
-Navbar.defaultProps = {title: 'Set Title Here'};
+Navbar.defaultProps = {title: 'Set Title Here', mode: 'light'};

@@ -36,6 +36,17 @@ export default function TextForm(props) {
 
     // }
 
+    const handelCopy = () => {
+        var text = document.getElementById('form-control');
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
+
+    const handelExtraSpaces = () => {
+        let newText = text.replace(/\s+/g, " ");
+        setText(newText);
+    }
+
     const captilizeSent = () => {
         let newText = text.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
         setText(newText);
@@ -43,7 +54,7 @@ export default function TextForm(props) {
 
     return (
         <>
-            <h1>{props.heading}</h1>
+            <h1 style={{color: props.mode === 'dark' ? 'white' : 'black'}}>{props.heading}</h1>
             <div className="mb-3">
                     <textarea
                     className="form-control"
@@ -51,16 +62,19 @@ export default function TextForm(props) {
                     id="exampleFormControlTextarea1"
                     rows="8"
                     onChange={handleChange}
+                    style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'white'}}
                     ></textarea>
             </div>
-            <div class="btn-group btn-group-justified">
+            <div className="btn-group btn-group-justified" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'light'}}>
                 <button className="btn btn-primary" onClick={handleUpperCaseClick}>UpperCase</button>
                 <button className="btn btn-primary" onClick={handleLowerCaseClick}>LowerCase</button>
                 <button className="btn btn-primary" onClick={handelClearText}>Clear Text</button>
                 <button className="btn btn-primary" onClick={speak}>Speak</button>
                 <button className="btn btn-primary" onClick={captilizeSent}>Captalized Sent</button>
-            </div>
-            <div className="container my-3">
+                <button className="btn btn-primary" onClick={handelCopy}> Copy </button>
+                <button className="btn btn-primary" onClick={handelExtraSpaces}> Remove Extra Spaces </button>
+            </div>            
+            <div className="container my-3" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'white',borderRadius: 5}}>
                 <h1>
                     Text Summary
                 </h1>
@@ -69,13 +83,13 @@ export default function TextForm(props) {
                 <h2>
                     Preview
                 </h2>
-                <p>{text}</p>
+                <p>{text.length>0?text:'Enter Text to preview'}</p>
             </div>
         </>
     );
 }
 
-TextForm.prototype = {heading: PropTypes.heading};
+TextForm.prototype = {heading: PropTypes.heading, mode: PropTypes.mode};
 
 TextForm.defaultProps = {
     heading: "Text Box"
