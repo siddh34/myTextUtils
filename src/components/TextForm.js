@@ -14,42 +14,50 @@ export default function TextForm(props) {
         let newText = text.toUpperCase();
 
         setText(newText);
+        props.showAlert("Text coverted to UpperCase","success");
     };
-
+    
     const handleLowerCaseClick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Text coverted to LowerCase","success");
     };
-
+    
     const handelClearText = () => {
         let newText = "";
         setText(newText);
+        props.showAlert("Text Cleared","success");
     };
-
+    
     const speak = () => {
         let speech = new SpeechSynthesisUtterance();
         speech.text = text;
         window.speechSynthesis.speak(speech);
+        props.showAlert("Using Voice Operation","success");
     };
-
+    
     // const FindReplace = () => {
-
-    // }
-
+        
+        // }
+        
     const handelCopy = () => {
-        var text = document.getElementById('form-control');
+        var text = document.getElementById('exampleFormControlTextarea1');
         text.select();
+        text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text Copied","success");
     }
-
+    
     const handelExtraSpaces = () => {
         let newText = text.replace(/\s+/g, " ");
         setText(newText);
+        props.showAlert("handeled Extra Spaces","success");
     }
-
+    
     const captilizeSent = () => {
         let newText = text.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
         setText(newText);
+        props.showAlert("Sentence Capitalized","success");
     }
 
     return (
