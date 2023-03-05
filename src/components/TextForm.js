@@ -82,7 +82,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary" onClick={handelCopy}> Copy </button>
                 <button className="btn btn-primary" onClick={handelExtraSpaces}> Remove Extra Spaces </button>
             </div>            
-            <div className="container my-3" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'white',borderRadius: 5}}>
+            <div className="container my-3" id="jsContainer" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'white',borderRadius: 5}}>
                 <h1>
                     Text Summary
                 </h1>

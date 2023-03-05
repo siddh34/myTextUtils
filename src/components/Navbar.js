@@ -1,9 +1,38 @@
 /* eslint-disable no-template-curly-in-string */
-import React from 'react'
+import React from "react";
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import './CSS/Nav.css';
+import './TextForm.js';
 
 export default function Navbar(props) {
+
+    const changeTheme1 = () => {
+        if (props.mode === 'dark'){
+            var el1 = document.getElementById('exampleFormControlTextarea1');
+            var el2 = document.getElementById('jsContainer');
+            el1.style.backgroundColor = "yellow";
+            el2.style.backgroundColor = "yellow";
+        }
+    }
+
+    const changeTheme2 = () => {
+        if (props.mode === 'dark'){
+            var el1 = document.getElementById('exampleFormControlTextarea1');
+            var el2 = document.getElementById('jsContainer');
+            el1.style.backgroundColor = "rgb(73, 51, 199)";
+            el2.style.backgroundColor = "rgb(73, 51, 199)";
+        }
+    }
+
+    const changeTheme3 = () => {
+        if (props.mode === 'dark'){
+            var el1 = document.getElementById('exampleFormControlTextarea1');
+            var el2 = document.getElementById('jsContainer');
+            el1.style.backgroundColor = "rgb(0, 238, 255)";
+            el2.style.backgroundColor = "rgb(0, 238, 255)";
+        }
+    }
 
     return (
         <nav data-bs-theme={props.mode} className="navbar navbar-expand-lg bg-body-tertiary">
@@ -33,6 +62,15 @@ export default function Navbar(props) {
                             </Link>
                         </li>
                     </ul>
+                    <ui className="nav-item">
+                        <div className='test1 rounded-circle' onClick={changeTheme1}></div>
+                    </ui>
+                    <ui className="nav-item">
+                        <div className='test2 rounded-circle' onClick={changeTheme2}></div>
+                    </ui>
+                    <ui className="nav-item">
+                        <div className='test3 rounded-circle' onClick={changeTheme3}></div>
+                    </ui>
                     <div className={`form-check form-switch text-${(props.mode === 'light') ? 'dark' : 'light'} mx-2`}>
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode} />
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
