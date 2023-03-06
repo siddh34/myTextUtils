@@ -1,23 +1,33 @@
 import React, { useState } from "react";
-import Navbar from './Navbar';
+import Navbar from './Navbar.jsx';
+import { useLocation } from "react-router-dom";
 
-export default function About() {
-    const [darkmode, setDarkMode] = useState("light");
+export default function About(props) {
 
-    const [myStyle, setMyStyle] = useState({
+    const loc = useLocation();
+    var mode = loc.state.mode;
+
+
+    const [darkmode, setDarkMode] = useState(mode);
+
+    const [myStyle, setMyStyle] = useState(mode === 'light' ? {
         color: 'black',
-        backgroundColor: 'white',
-    }
-    );
+        backgroundColor: 'white'
+    } : {
+        color: 'white',
+        backgroundColor: 'black'
+    });
 
     const toggleState = () => {
-        if (myStyle.backgroundColor === 'white') {
+        // var el4 = document.getElementById('flexSwitchCheckDefault');
+        if (darkmode === 'light') {
             setMyStyle({
                 color: 'white',
                 backgroundColor: 'black'
             })
             document.body.style.backgroundColor = "#1A1A1A";
             setDarkMode("dark");
+            // el4.checked = !el4.checked;
         }
         else {
             setMyStyle({
@@ -26,6 +36,7 @@ export default function About() {
             })
             setDarkMode("light");
             document.body.style.backgroundColor = "white";
+            // el4.checked = !el4.checked;
         }
     };
 
@@ -66,3 +77,4 @@ export default function About() {
         </>
     );
 }
+

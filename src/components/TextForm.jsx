@@ -36,10 +36,6 @@ export default function TextForm(props) {
         props.showAlert("Using Voice Operation","success");
     };
     
-    // const FindReplace = () => {
-        
-        // }
-        
     const handelCopy = () => {
         var text = document.getElementById('exampleFormControlTextarea1');
         text.select();
