@@ -41,6 +41,7 @@ export default function TextForm(props) {
         text.select();
         text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Text Copied","success");
     }
     
@@ -70,20 +71,20 @@ export default function TextForm(props) {
                     ></textarea>
             </div>
             <div className="btn-group btn-group-justified" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'light'}}>
-                <button className="btn btn-primary" onClick={handleUpperCaseClick}>UpperCase</button>
-                <button className="btn btn-primary" onClick={handleLowerCaseClick}>LowerCase</button>
-                <button className="btn btn-primary" onClick={handelClearText}>Clear Text</button>
-                <button className="btn btn-primary" onClick={speak}>Speak</button>
-                <button className="btn btn-primary" onClick={captilizeSent}>Captalized Sent</button>
-                <button className="btn btn-primary" onClick={handelCopy}> Copy </button>
-                <button className="btn btn-primary" onClick={handelExtraSpaces}> Remove Extra Spaces </button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={handleUpperCaseClick}>UpperCase</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={handleLowerCaseClick}>LowerCase</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={handelClearText}>Clear Text</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={speak}>Speak</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={captilizeSent}>Captalized Sent</button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={handelCopy}> Copy </button>
+                <button disabled={text.length===0} className="btn btn-primary" onClick={handelExtraSpaces}> Remove Extra Spaces </button>
             </div>            
             <div className="container my-3" id="jsContainer" style={{backgroundColor: props.mode === 'dark' ? '#BB86FC' : 'white',borderRadius: 5}}>
                 <h1>
                     Text Summary
                 </h1>
-                <p>{text.split(" ").length - 1} words and {text.length} characters</p>
-                <p>{0.008 * text.split(" ").length} miniutes read</p>
+                <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+                <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} miniutes read</p>
                 <h2>
                     Preview
                 </h2>
