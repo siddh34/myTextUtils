@@ -54,7 +54,7 @@ export default function Navbar(props) {
         if(props.mode === "light"){
             el1.style.backgroundColor = "yellow";
             el2.style.backgroundColor = "rgb(73, 51, 199)";
-            el3.style.backgroundColor = "rgb(0, 238, 255)";
+            el3.style.backgroundColor = "rgb(255, 204, 153)";
             el4.checked = true;
         }
         else{
