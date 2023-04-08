@@ -1,7 +1,21 @@
 name: Publish to GitHub Pages
+name: Publish to GitHub Pages
 
 on:
   push:
+    branches: ["main"]
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.PAGES_DEPLOYMENT }}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
     branches: ["main"]
 
 env:
