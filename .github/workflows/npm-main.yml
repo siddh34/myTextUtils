@@ -26,4 +26,4 @@ jobs:
     - run: npm run build --if-present
     
     - name: deploy
-      uses: jamesIves/github-pages-deploy-action@v4
+      uses: FdelMazo/node-to-gh-action@v2
