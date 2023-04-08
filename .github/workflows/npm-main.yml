@@ -27,6 +27,6 @@ jobs:
     - run: npm test
     
     - name: deploy
-      uses: siddh34/github-pages-deploy-action@v4
+      uses: jamesIves/github-pages-deploy-action@v4
       with: 
         folder: build *  
