@@ -27,5 +27,3 @@ jobs:
     
     - name: deploy
       uses: jamesIves/github-pages-deploy-action@v4
-      with: 
-        folder: build *  
