@@ -9,7 +9,10 @@ import About from './components/About.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/myTextUtils">
+    {/* Below code use for github actions */}
+    <BrowserRouter basename="/myTextUtils"> 
+    {/* <BrowserRouter>  */}
+    {/*Above code Use while using docker */}
       <Routes>
         <Route exact path="/" element={ <App /> }></Route>
         <Route path="/About/:type" element={ <About /> }></Route>
