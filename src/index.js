@@ -10,8 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* Below code use for github actions */}
-    <BrowserRouter basename="/myTextUtils"> 
-    {/* <BrowserRouter>  */}
+    {/* <BrowserRouter basename="/myTextUtils">  */}
+    <BrowserRouter> 
     {/*Above code Use while using docker */}
       <Routes>
         <Route exact path="/" element={ <App /> }></Route>
