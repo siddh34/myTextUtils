@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# TextUtils documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Runing the project
 
-## Available Scripts
+* First Install NodeJS
 
-In the project directory, you can run:
+    [Node JS Installation](https://nodejs.org/en/download)
 
-### `npm start`
+* Run The Following Command in order
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+        npm install i
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+        npm start
 
-### `npm test`
+## What is Textutils?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![IMG 1](./Images/TextUtils.png)
 
-### `npm run build`
+* Textutils is an web application which can be used to analyse text & to form some basic operations on it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Basic operations include uppercasing, lowercasing, copying, removing extra spaces, captilized the text properly & we can even make the website to speak the text.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dark mode in textutils
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![IMG 2](./Images/darkmode.png)
 
-### `npm run eject`
+* You can even can the color of the container where you type the text.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future of Textutils
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* As it is code with harry's project I enjoyed the operations on text we can make it more like quillbot & let people enjoy the good stuff for free.
