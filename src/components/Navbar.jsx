@@ -52,7 +52,7 @@ export default function Navbar(props) {
         var el3 = document.getElementById('test3');
         var el4 = document.getElementById('flexSwitchCheckDefault');
         if(props.mode === "light"){
-            el1.style.backgroundColor = "yellow";
+            el1.style.backgroundColor = "green";
             el2.style.backgroundColor = "rgb(73, 51, 199)";
             el3.style.backgroundColor = "rgb(0, 238, 255)";
             el4.checked = true;
