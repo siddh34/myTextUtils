@@ -10,8 +10,8 @@ export default function Navbar(props) {
         var el1 = document.getElementById('exampleFormControlTextarea1');
         var el2 = document.getElementById('jsContainer');
         if (props.mode === 'dark'){
-            el1.style.backgroundColor = "yellow";
-            el2.style.backgroundColor = "yellow";
+            el1.style.backgroundColor = "green";
+            el2.style.backgroundColor = "green";
         }
         else{
             el1.style.backgroundColor = "rgb(253, 53, 154)";
