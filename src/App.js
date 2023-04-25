@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <Navbar title="Text Utility" mode={darkmode} toggleMode={toggle}></Navbar>
+      <Navbar title="TextUtils" mode={darkmode} toggleMode={toggle}></Navbar>
       <Alert title={`${(alert.msg)}`} type={`${(alert.type)}`}></Alert>
       <div className="container my-3">
         <TextForm
