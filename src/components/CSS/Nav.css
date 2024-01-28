@@ -1,19 +1,19 @@
 .test1{
-    background-color: rgb(253, 53, 154);
+    background-color: #F5EEE6;
     width: 30px;
     height: 30px;
     margin: 10px;
 }
 
 .test2{
-    background-color: rgb(229, 209, 158);
+    background-color: #F3D7CA;
     width: 30px;
     height: 30px;
     margin: 5px;
 }
 
 .test3{
-    background-color: rgb(234, 127, 65);
+    background-color: #E6A4B4;
     width: 30px;
     height: 30px;
     margin: 5px;

@@ -14,8 +14,8 @@ export default function Navbar(props) {
             el2.style.backgroundColor = "green";
         }
         else{
-            el1.style.backgroundColor = "rgb(253, 53, 154)";
-            el2.style.backgroundColor = "rgb(253, 53, 154)";
+            el1.style.backgroundColor = "#FDF0D1";
+            el2.style.backgroundColor = "#FDF0D1";
         }
     }
 
@@ -27,8 +27,8 @@ export default function Navbar(props) {
             el2.style.backgroundColor = "rgb(73, 51, 199)";
         }
         else{
-            el1.style.backgroundColor = "rgb(229, 209, 158)";
-            el2.style.backgroundColor = "rgb(229, 209, 158)";
+            el1.style.backgroundColor = "#F3D7CA";
+            el2.style.backgroundColor = "#F3D7CA";
         }
     }
 
@@ -40,8 +40,8 @@ export default function Navbar(props) {
             el2.style.backgroundColor = "rgb(0, 238, 255)";
         }
         else{
-            el1.style.backgroundColor = "rgb(234, 127, 65)";
-            el2.style.backgroundColor = "rgb(234, 127, 65)";
+            el1.style.backgroundColor = "#E6A4B4";
+            el2.style.backgroundColor = "#E6A4B4";
         }
     }
 
@@ -58,9 +58,9 @@ export default function Navbar(props) {
             el4.checked = true;
         }
         else{
-            el1.style.backgroundColor = "rgb(253, 53, 154)";
-            el2.style.backgroundColor = "rgb(229, 209, 158)";
-            el3.style.backgroundColor = "rgb(234, 127, 65)";
+            el1.style.backgroundColor = "#F5EEE6";
+            el2.style.backgroundColor = "#F3D7CA";
+            el3.style.backgroundColor = "#E6A4B4";
             el4.checked = false;
         }
     }
